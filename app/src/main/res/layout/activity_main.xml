@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.glarimy.glarimy.MainActivity">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_margin="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="Your Score: 0/0"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/banner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:text="How good you are in Science?"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/score"/>
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:textSize="15dp"
+                android:fontFamily="arial"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:text="Is it true that Saturn is the only plant in our solar system that rotates in anti-clock direction?"
+                app:layout_constraintTop_toBottomOf="@+id/banner" />
+
+            <RadioGroup
+                android:id="@+id/options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/question">
+
+                <RadioButton
+                    android:id="@+id/a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True, Saturn is the only planet that rotates in the clockwise direction."
+                    android:textSize="15dp"
+                    android:layout_marginBottom="6dp"
+                    app:layout_constraintTop_toBottomOf="@+id/question" />
+
+                <RadioButton
+                    android:id="@+id/b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False, Saturn is not the only planet that rotates in the clockwise direction. Jupitor also rotates in clock-wise direction."
+                    android:textSize="15dp"
+                    android:layout_marginBottom="6dp"
+                    app:layout_constraintTop_toBottomOf="@+id/a" />
+
+                <RadioButton
+                    android:id="@+id/c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False, All planets rotate in the clockwise direction."
+                    android:textSize="15dp"
+                    android:layout_marginBottom="6dp"
+                    app:layout_constraintTop_toBottomOf="@+id/b" />
+
+                <RadioButton
+                    android:id="@+id/d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False, none of the planets rotate in the clockwise direction."
+                    android:textSize="15dp"
+                    android:layout_marginBottom="6dp"
+                    app:layout_constraintTop_toBottomOf="@+id/c" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Verify"
+                android:onClick="verify"
+                android:textSize="18dp"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorWhite"
+                android:minHeight="35dp"
+                app:layout_constraintTop_toBottomOf="@+id/options"/>
+
+            <TextView
+                android:id="@+id/bottom1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text=""
+                app:layout_constraintTop_toBottomOf="@+id/button"/>
+
+            </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
+
