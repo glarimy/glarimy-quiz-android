@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void verify(View view){
-        Log.e("Glarimy", "You have clicked the VERIFY button");
+        Log.e("Glarimy", "You have clicked the VERIFY button. Will verify!");
         Toast.makeText(this, "Great! You got it!", Toast.LENGTH_LONG).show();
     }
 }
